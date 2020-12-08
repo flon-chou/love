@@ -12,39 +12,28 @@
     },
     {
       "fieldName": "primeraConsulta",
-      "fieldType": "String",
-      "javadoc": "今日初诊",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": "64"
+      "fieldType": "Integer",
+      "javadoc": "今日初诊"
     },
     {
       "fieldName": "primeraConsultaLeave",
-      "fieldType": "String",
-      "javadoc": "留下初诊",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": "128"
+      "fieldType": "Integer",
+      "javadoc": "留下初诊"
     },
     {
       "fieldName": "nuevaConsulta",
-      "fieldType": "String",
-      "javadoc": "今日复诊",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": "64"
+      "fieldType": "Integer",
+      "javadoc": "今日复诊"
     },
     {
       "fieldName": "todayPerformance",
-      "fieldType": "String",
-      "javadoc": "累计业绩",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": "1"
+      "fieldType": "Integer",
+      "javadoc": "今日业绩"
+    },
+    {
+      "fieldName": "totalPerformance",
+      "fieldType": "Integer",
+      "javadoc": "累计业绩"
     },
     {
       "fieldName": "createTime",

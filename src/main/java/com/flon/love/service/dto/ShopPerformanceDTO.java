@@ -23,30 +23,32 @@ public class ShopPerformanceDTO implements Serializable {
     /**
      * 今日初诊
      */
-    @Size(max = 64)
     @ApiModelProperty(value = "今日初诊")
-    private String primeraConsulta;
+    private Integer primeraConsulta;
 
     /**
      * 留下初诊
      */
-    @Size(max = 128)
     @ApiModelProperty(value = "留下初诊")
-    private String primeraConsultaLeave;
+    private Integer primeraConsultaLeave;
 
     /**
      * 今日复诊
      */
-    @Size(max = 64)
     @ApiModelProperty(value = "今日复诊")
-    private String nuevaConsulta;
+    private Integer nuevaConsulta;
+
+    /**
+     * 今日业绩
+     */
+    @ApiModelProperty(value = "今日业绩")
+    private Integer todayPerformance;
 
     /**
      * 累计业绩
      */
-    @Size(max = 1)
     @ApiModelProperty(value = "累计业绩")
-    private String todayPerformance;
+    private Integer totalPerformance;
 
     /**
      * 创建时间
@@ -78,36 +80,44 @@ public class ShopPerformanceDTO implements Serializable {
         this.shopName = shopName;
     }
 
-    public String getPrimeraConsulta() {
+    public Integer getPrimeraConsulta() {
         return primeraConsulta;
     }
 
-    public void setPrimeraConsulta(String primeraConsulta) {
+    public void setPrimeraConsulta(Integer primeraConsulta) {
         this.primeraConsulta = primeraConsulta;
     }
 
-    public String getPrimeraConsultaLeave() {
+    public Integer getPrimeraConsultaLeave() {
         return primeraConsultaLeave;
     }
 
-    public void setPrimeraConsultaLeave(String primeraConsultaLeave) {
+    public void setPrimeraConsultaLeave(Integer primeraConsultaLeave) {
         this.primeraConsultaLeave = primeraConsultaLeave;
     }
 
-    public String getNuevaConsulta() {
+    public Integer getNuevaConsulta() {
         return nuevaConsulta;
     }
 
-    public void setNuevaConsulta(String nuevaConsulta) {
+    public void setNuevaConsulta(Integer nuevaConsulta) {
         this.nuevaConsulta = nuevaConsulta;
     }
 
-    public String getTodayPerformance() {
+    public Integer getTodayPerformance() {
         return todayPerformance;
     }
 
-    public void setTodayPerformance(String todayPerformance) {
+    public void setTodayPerformance(Integer todayPerformance) {
         this.todayPerformance = todayPerformance;
+    }
+
+    public Integer getTotalPerformance() {
+        return totalPerformance;
+    }
+
+    public void setTotalPerformance(Integer totalPerformance) {
+        this.totalPerformance = totalPerformance;
     }
 
     public String getCreateTime() {
@@ -149,10 +159,11 @@ public class ShopPerformanceDTO implements Serializable {
         return "ShopPerformanceDTO{" +
             "id=" + getId() +
             ", shopName='" + getShopName() + "'" +
-            ", primeraConsulta='" + getPrimeraConsulta() + "'" +
-            ", primeraConsultaLeave='" + getPrimeraConsultaLeave() + "'" +
-            ", nuevaConsulta='" + getNuevaConsulta() + "'" +
-            ", todayPerformance='" + getTodayPerformance() + "'" +
+            ", primeraConsulta=" + getPrimeraConsulta() +
+            ", primeraConsultaLeave=" + getPrimeraConsultaLeave() +
+            ", nuevaConsulta=" + getNuevaConsulta() +
+            ", todayPerformance=" + getTodayPerformance() +
+            ", totalPerformance=" + getTotalPerformance() +
             ", createTime='" + getCreateTime() + "'" +
             ", del=" + getDel() +
             "}";

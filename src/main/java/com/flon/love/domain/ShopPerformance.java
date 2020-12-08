@@ -29,30 +29,32 @@ public class ShopPerformance implements Serializable {
     /**
      * 今日初诊
      */
-    @Size(max = 64)
-    @Column(name = "primera_consulta", length = 64)
-    private String primeraConsulta;
+    @Column(name = "primera_consulta")
+    private Integer primeraConsulta;
 
     /**
      * 留下初诊
      */
-    @Size(max = 128)
-    @Column(name = "primera_consulta_leave", length = 128)
-    private String primeraConsultaLeave;
+    @Column(name = "primera_consulta_leave")
+    private Integer primeraConsultaLeave;
 
     /**
      * 今日复诊
      */
-    @Size(max = 64)
-    @Column(name = "nueva_consulta", length = 64)
-    private String nuevaConsulta;
+    @Column(name = "nueva_consulta")
+    private Integer nuevaConsulta;
+
+    /**
+     * 今日业绩
+     */
+    @Column(name = "today_performance")
+    private Integer todayPerformance;
 
     /**
      * 累计业绩
      */
-    @Size(max = 1)
-    @Column(name = "today_performance", length = 1)
-    private String todayPerformance;
+    @Column(name = "total_performance")
+    private Integer totalPerformance;
 
     /**
      * 创建时间
@@ -89,56 +91,69 @@ public class ShopPerformance implements Serializable {
         this.shopName = shopName;
     }
 
-    public String getPrimeraConsulta() {
+    public Integer getPrimeraConsulta() {
         return primeraConsulta;
     }
 
-    public ShopPerformance primeraConsulta(String primeraConsulta) {
+    public ShopPerformance primeraConsulta(Integer primeraConsulta) {
         this.primeraConsulta = primeraConsulta;
         return this;
     }
 
-    public void setPrimeraConsulta(String primeraConsulta) {
+    public void setPrimeraConsulta(Integer primeraConsulta) {
         this.primeraConsulta = primeraConsulta;
     }
 
-    public String getPrimeraConsultaLeave() {
+    public Integer getPrimeraConsultaLeave() {
         return primeraConsultaLeave;
     }
 
-    public ShopPerformance primeraConsultaLeave(String primeraConsultaLeave) {
+    public ShopPerformance primeraConsultaLeave(Integer primeraConsultaLeave) {
         this.primeraConsultaLeave = primeraConsultaLeave;
         return this;
     }
 
-    public void setPrimeraConsultaLeave(String primeraConsultaLeave) {
+    public void setPrimeraConsultaLeave(Integer primeraConsultaLeave) {
         this.primeraConsultaLeave = primeraConsultaLeave;
     }
 
-    public String getNuevaConsulta() {
+    public Integer getNuevaConsulta() {
         return nuevaConsulta;
     }
 
-    public ShopPerformance nuevaConsulta(String nuevaConsulta) {
+    public ShopPerformance nuevaConsulta(Integer nuevaConsulta) {
         this.nuevaConsulta = nuevaConsulta;
         return this;
     }
 
-    public void setNuevaConsulta(String nuevaConsulta) {
+    public void setNuevaConsulta(Integer nuevaConsulta) {
         this.nuevaConsulta = nuevaConsulta;
     }
 
-    public String getTodayPerformance() {
+    public Integer getTodayPerformance() {
         return todayPerformance;
     }
 
-    public ShopPerformance todayPerformance(String todayPerformance) {
+    public ShopPerformance todayPerformance(Integer todayPerformance) {
         this.todayPerformance = todayPerformance;
         return this;
     }
 
-    public void setTodayPerformance(String todayPerformance) {
+    public void setTodayPerformance(Integer todayPerformance) {
         this.todayPerformance = todayPerformance;
+    }
+
+    public Integer getTotalPerformance() {
+        return totalPerformance;
+    }
+
+    public ShopPerformance totalPerformance(Integer totalPerformance) {
+        this.totalPerformance = totalPerformance;
+        return this;
+    }
+
+    public void setTotalPerformance(Integer totalPerformance) {
+        this.totalPerformance = totalPerformance;
     }
 
     public String getCreateTime() {
@@ -190,10 +205,11 @@ public class ShopPerformance implements Serializable {
         return "ShopPerformance{" +
             "id=" + getId() +
             ", shopName='" + getShopName() + "'" +
-            ", primeraConsulta='" + getPrimeraConsulta() + "'" +
-            ", primeraConsultaLeave='" + getPrimeraConsultaLeave() + "'" +
-            ", nuevaConsulta='" + getNuevaConsulta() + "'" +
-            ", todayPerformance='" + getTodayPerformance() + "'" +
+            ", primeraConsulta=" + getPrimeraConsulta() +
+            ", primeraConsultaLeave=" + getPrimeraConsultaLeave() +
+            ", nuevaConsulta=" + getNuevaConsulta() +
+            ", todayPerformance=" + getTodayPerformance() +
+            ", totalPerformance=" + getTotalPerformance() +
             ", createTime='" + getCreateTime() + "'" +
             ", del=" + getDel() +
             "}";

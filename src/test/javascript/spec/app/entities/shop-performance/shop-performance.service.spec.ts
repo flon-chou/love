@@ -20,7 +20,7 @@ describe('Service Tests', () => {
       service = injector.get(ShopPerformanceService);
       httpMock = injector.get(HttpTestingController);
 
-      elemDefault = new ShopPerformance(0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 0);
+      elemDefault = new ShopPerformance(0, 'AAAAAAA', 0, 0, 0, 0, 0, 'AAAAAAA', 0);
     });
 
     describe('Service methods', () => {
@@ -55,10 +55,11 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             shopName: 'BBBBBB',
-            primeraConsulta: 'BBBBBB',
-            primeraConsultaLeave: 'BBBBBB',
-            nuevaConsulta: 'BBBBBB',
-            todayPerformance: 'BBBBBB',
+            primeraConsulta: 1,
+            primeraConsultaLeave: 1,
+            nuevaConsulta: 1,
+            todayPerformance: 1,
+            totalPerformance: 1,
             createTime: 'BBBBBB',
             del: 1,
           },
@@ -78,10 +79,11 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             shopName: 'BBBBBB',
-            primeraConsulta: 'BBBBBB',
-            primeraConsultaLeave: 'BBBBBB',
-            nuevaConsulta: 'BBBBBB',
-            todayPerformance: 'BBBBBB',
+            primeraConsulta: 1,
+            primeraConsultaLeave: 1,
+            nuevaConsulta: 1,
+            todayPerformance: 1,
+            totalPerformance: 1,
             createTime: 'BBBBBB',
             del: 1,
           },

@@ -21,6 +21,7 @@
       "primeraConsultaLeave": "Primera Consulta Leave",
       "nuevaConsulta": "Nueva Consulta",
       "todayPerformance": "Today Performance",
+      "totalPerformance": "Total Performance",
       "createTime": "Create Time",
       "del": "Del",
       "help": {
@@ -28,7 +29,8 @@
         "primeraConsulta": "今日初诊",
         "primeraConsultaLeave": "留下初诊",
         "nuevaConsulta": "今日复诊",
-        "todayPerformance": "累计业绩",
+        "todayPerformance": "今日业绩",
+        "totalPerformance": "累计业绩",
         "createTime": "创建时间",
         "del": "数据有效（0：无效 ， 1：有效）"
       }
