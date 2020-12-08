@@ -1,0 +1,77 @@
+{
+  "name": "ShopPerformance",
+  "fields": [
+    {
+      "fieldName": "shopName",
+      "fieldType": "String",
+      "javadoc": "门店名",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "primeraConsulta",
+      "fieldType": "String",
+      "javadoc": "今日初诊",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "primeraConsultaLeave",
+      "fieldType": "String",
+      "javadoc": "留下初诊",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": "128"
+    },
+    {
+      "fieldName": "nuevaConsulta",
+      "fieldType": "String",
+      "javadoc": "今日复诊",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "todayPerformance",
+      "fieldType": "String",
+      "javadoc": "累计业绩",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": "1"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "String",
+      "javadoc": "创建时间"
+    },
+    {
+      "fieldName": "del",
+      "fieldType": "Integer",
+      "javadoc": "数据有效（0：无效 ， 1：有效）",
+      "fieldValidateRules": [
+        "max"
+      ],
+      "fieldValidateRulesMax": "1"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201208031538",
+  "javadoc": "门店业绩",
+  "entityTableName": "shop_performance",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

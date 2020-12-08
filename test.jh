@@ -1,0 +1,26 @@
+/**
+ * 门店业绩
+ */
+entity ShopPerformance {
+	/** 门店名 */
+	shopName String maxlength(50),
+    /** 今日初诊 */
+    primeraConsulta String maxlength(64),
+    /** 留下初诊 */
+    primeraConsultaLeave String maxlength(128),
+    /** 今日复诊 */
+    nuevaConsulta String maxlength(64),
+    /** 今日业绩 */
+    todayPerformance String maxlength(1),
+    /** 累计业绩 */
+    todayPerformance String maxlength(1),
+    /** 创建时间 */
+    createTime String,
+    /** 数据有效（0：无效 ， 1：有效） */
+    del Integer max(1)
+}
+
+
+dto * with mapstruct
+service * with serviceClass
+paginate * with pagination

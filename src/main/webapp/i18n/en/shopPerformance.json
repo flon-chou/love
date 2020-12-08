@@ -1,0 +1,37 @@
+{
+  "loveApp": {
+    "shopPerformance": {
+      "home": {
+        "title": "Shop Performances",
+        "createLabel": "Create a new Shop Performance",
+        "createOrEditLabel": "Create or edit a Shop Performance",
+        "notFound": "No Shop Performances found"
+      },
+      "created": "A new Shop Performance is created with identifier {{ param }}",
+      "updated": "A Shop Performance is updated with identifier {{ param }}",
+      "deleted": "A Shop Performance is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Shop Performance {{ id }}?"
+      },
+      "detail": {
+        "title": "Shop Performance"
+      },
+      "shopName": "Shop Name",
+      "primeraConsulta": "Primera Consulta",
+      "primeraConsultaLeave": "Primera Consulta Leave",
+      "nuevaConsulta": "Nueva Consulta",
+      "todayPerformance": "Today Performance",
+      "createTime": "Create Time",
+      "del": "Del",
+      "help": {
+        "shopName": "门店名",
+        "primeraConsulta": "今日初诊",
+        "primeraConsultaLeave": "留下初诊",
+        "nuevaConsulta": "今日复诊",
+        "todayPerformance": "累计业绩",
+        "createTime": "创建时间",
+        "del": "数据有效（0：无效 ， 1：有效）"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="shopPerformance">
+            <h2><span jhiTranslate="loveApp.shopPerformance.detail.title">Shop Performance</span> {{ shopPerformance.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="loveApp.shopPerformance.shopName" [ngbTooltip]="'loveApp.shopPerformance.help.shopName' | translate">Shop Name</span></dt>
+                <dd>
+                    <span>{{ shopPerformance.shopName }}</span>
+                </dd>
+                <dt><span jhiTranslate="loveApp.shopPerformance.primeraConsulta" [ngbTooltip]="'loveApp.shopPerformance.help.primeraConsulta' | translate">Primera Consulta</span></dt>
+                <dd>
+                    <span>{{ shopPerformance.primeraConsulta }}</span>
+                </dd>
+                <dt><span jhiTranslate="loveApp.shopPerformance.primeraConsultaLeave" [ngbTooltip]="'loveApp.shopPerformance.help.primeraConsultaLeave' | translate">Primera Consulta Leave</span></dt>
+                <dd>
+                    <span>{{ shopPerformance.primeraConsultaLeave }}</span>
+                </dd>
+                <dt><span jhiTranslate="loveApp.shopPerformance.nuevaConsulta" [ngbTooltip]="'loveApp.shopPerformance.help.nuevaConsulta' | translate">Nueva Consulta</span></dt>
+                <dd>
+                    <span>{{ shopPerformance.nuevaConsulta }}</span>
+                </dd>
+                <dt><span jhiTranslate="loveApp.shopPerformance.todayPerformance" [ngbTooltip]="'loveApp.shopPerformance.help.todayPerformance' | translate">Today Performance</span></dt>
+                <dd>
+                    <span>{{ shopPerformance.todayPerformance }}</span>
+                </dd>
+                <dt><span jhiTranslate="loveApp.shopPerformance.createTime" [ngbTooltip]="'loveApp.shopPerformance.help.createTime' | translate">Create Time</span></dt>
+                <dd>
+                    <span>{{ shopPerformance.createTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="loveApp.shopPerformance.del" [ngbTooltip]="'loveApp.shopPerformance.help.del' | translate">Del</span></dt>
+                <dd>
+                    <span>{{ shopPerformance.del }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/shop-performance', shopPerformance.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
