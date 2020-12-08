@@ -1,10 +1,11 @@
 export interface IShopPerformance {
   id?: number;
   shopName?: string;
-  primeraConsulta?: string;
-  primeraConsultaLeave?: string;
-  nuevaConsulta?: string;
-  todayPerformance?: string;
+  primeraConsulta?: number;
+  primeraConsultaLeave?: number;
+  nuevaConsulta?: number;
+  todayPerformance?: number;
+  totalPerformance?: number;
   createTime?: string;
   del?: number;
 }
@@ -13,10 +14,11 @@ export class ShopPerformance implements IShopPerformance {
   constructor(
     public id?: number,
     public shopName?: string,
-    public primeraConsulta?: string,
-    public primeraConsultaLeave?: string,
-    public nuevaConsulta?: string,
-    public todayPerformance?: string,
+    public primeraConsulta?: number,
+    public primeraConsultaLeave?: number,
+    public nuevaConsulta?: number,
+    public todayPerformance?: number,
+    public totalPerformance?: number,
     public createTime?: string,
     public del?: number
   ) {}

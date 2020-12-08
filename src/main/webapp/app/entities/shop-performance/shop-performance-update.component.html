@@ -25,50 +25,32 @@
 
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="loveApp.shopPerformance.primeraConsulta" for="field_primeraConsulta" [ngbTooltip]="'loveApp.shopPerformance.help.primeraConsulta' | translate">Primera Consulta</label>
-                    <input type="text" class="form-control" name="primeraConsulta" id="field_primeraConsulta"
+                    <input type="number" class="form-control" name="primeraConsulta" id="field_primeraConsulta"
                            formControlName="primeraConsulta"/>
-                    <div *ngIf="editForm.get('primeraConsulta')!.invalid && (editForm.get('primeraConsulta')!.dirty || editForm.get('primeraConsulta')!.touched)">
-                        <small class="form-text text-danger"
-                               *ngIf="editForm.get('primeraConsulta')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 64 }">
-                        This field cannot be longer than 64 characters.
-                        </small>
-                    </div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="loveApp.shopPerformance.primeraConsultaLeave" for="field_primeraConsultaLeave" [ngbTooltip]="'loveApp.shopPerformance.help.primeraConsultaLeave' | translate">Primera Consulta Leave</label>
-                    <input type="text" class="form-control" name="primeraConsultaLeave" id="field_primeraConsultaLeave"
+                    <input type="number" class="form-control" name="primeraConsultaLeave" id="field_primeraConsultaLeave"
                            formControlName="primeraConsultaLeave"/>
-                    <div *ngIf="editForm.get('primeraConsultaLeave')!.invalid && (editForm.get('primeraConsultaLeave')!.dirty || editForm.get('primeraConsultaLeave')!.touched)">
-                        <small class="form-text text-danger"
-                               *ngIf="editForm.get('primeraConsultaLeave')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 128 }">
-                        This field cannot be longer than 128 characters.
-                        </small>
-                    </div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="loveApp.shopPerformance.nuevaConsulta" for="field_nuevaConsulta" [ngbTooltip]="'loveApp.shopPerformance.help.nuevaConsulta' | translate">Nueva Consulta</label>
-                    <input type="text" class="form-control" name="nuevaConsulta" id="field_nuevaConsulta"
+                    <input type="number" class="form-control" name="nuevaConsulta" id="field_nuevaConsulta"
                            formControlName="nuevaConsulta"/>
-                    <div *ngIf="editForm.get('nuevaConsulta')!.invalid && (editForm.get('nuevaConsulta')!.dirty || editForm.get('nuevaConsulta')!.touched)">
-                        <small class="form-text text-danger"
-                               *ngIf="editForm.get('nuevaConsulta')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 64 }">
-                        This field cannot be longer than 64 characters.
-                        </small>
-                    </div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="loveApp.shopPerformance.todayPerformance" for="field_todayPerformance" [ngbTooltip]="'loveApp.shopPerformance.help.todayPerformance' | translate">Today Performance</label>
-                    <input type="text" class="form-control" name="todayPerformance" id="field_todayPerformance"
+                    <input type="number" class="form-control" name="todayPerformance" id="field_todayPerformance"
                            formControlName="todayPerformance"/>
-                    <div *ngIf="editForm.get('todayPerformance')!.invalid && (editForm.get('todayPerformance')!.dirty || editForm.get('todayPerformance')!.touched)">
-                        <small class="form-text text-danger"
-                               *ngIf="editForm.get('todayPerformance')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 1 }">
-                        This field cannot be longer than 1 characters.
-                        </small>
-                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="loveApp.shopPerformance.totalPerformance" for="field_totalPerformance" [ngbTooltip]="'loveApp.shopPerformance.help.totalPerformance' | translate">Total Performance</label>
+                    <input type="number" class="form-control" name="totalPerformance" id="field_totalPerformance"
+                           formControlName="totalPerformance"/>
                 </div>
 
                 <div class="form-group">

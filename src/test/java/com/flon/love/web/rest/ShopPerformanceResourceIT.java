@@ -35,17 +35,20 @@ public class ShopPerformanceResourceIT {
     private static final String DEFAULT_SHOP_NAME = "AAAAAAAAAA";
     private static final String UPDATED_SHOP_NAME = "BBBBBBBBBB";
 
-    private static final String DEFAULT_PRIMERA_CONSULTA = "AAAAAAAAAA";
-    private static final String UPDATED_PRIMERA_CONSULTA = "BBBBBBBBBB";
+    private static final Integer DEFAULT_PRIMERA_CONSULTA = 1;
+    private static final Integer UPDATED_PRIMERA_CONSULTA = 2;
 
-    private static final String DEFAULT_PRIMERA_CONSULTA_LEAVE = "AAAAAAAAAA";
-    private static final String UPDATED_PRIMERA_CONSULTA_LEAVE = "BBBBBBBBBB";
+    private static final Integer DEFAULT_PRIMERA_CONSULTA_LEAVE = 1;
+    private static final Integer UPDATED_PRIMERA_CONSULTA_LEAVE = 2;
 
-    private static final String DEFAULT_NUEVA_CONSULTA = "AAAAAAAAAA";
-    private static final String UPDATED_NUEVA_CONSULTA = "BBBBBBBBBB";
+    private static final Integer DEFAULT_NUEVA_CONSULTA = 1;
+    private static final Integer UPDATED_NUEVA_CONSULTA = 2;
 
-    private static final String DEFAULT_TODAY_PERFORMANCE = "A";
-    private static final String UPDATED_TODAY_PERFORMANCE = "B";
+    private static final Integer DEFAULT_TODAY_PERFORMANCE = 1;
+    private static final Integer UPDATED_TODAY_PERFORMANCE = 2;
+
+    private static final Integer DEFAULT_TOTAL_PERFORMANCE = 1;
+    private static final Integer UPDATED_TOTAL_PERFORMANCE = 2;
 
     private static final String DEFAULT_CREATE_TIME = "AAAAAAAAAA";
     private static final String UPDATED_CREATE_TIME = "BBBBBBBBBB";
@@ -83,6 +86,7 @@ public class ShopPerformanceResourceIT {
             .primeraConsultaLeave(DEFAULT_PRIMERA_CONSULTA_LEAVE)
             .nuevaConsulta(DEFAULT_NUEVA_CONSULTA)
             .todayPerformance(DEFAULT_TODAY_PERFORMANCE)
+            .totalPerformance(DEFAULT_TOTAL_PERFORMANCE)
             .createTime(DEFAULT_CREATE_TIME)
             .del(DEFAULT_DEL);
         return shopPerformance;
@@ -100,6 +104,7 @@ public class ShopPerformanceResourceIT {
             .primeraConsultaLeave(UPDATED_PRIMERA_CONSULTA_LEAVE)
             .nuevaConsulta(UPDATED_NUEVA_CONSULTA)
             .todayPerformance(UPDATED_TODAY_PERFORMANCE)
+            .totalPerformance(UPDATED_TOTAL_PERFORMANCE)
             .createTime(UPDATED_CREATE_TIME)
             .del(UPDATED_DEL);
         return shopPerformance;
@@ -130,6 +135,7 @@ public class ShopPerformanceResourceIT {
         assertThat(testShopPerformance.getPrimeraConsultaLeave()).isEqualTo(DEFAULT_PRIMERA_CONSULTA_LEAVE);
         assertThat(testShopPerformance.getNuevaConsulta()).isEqualTo(DEFAULT_NUEVA_CONSULTA);
         assertThat(testShopPerformance.getTodayPerformance()).isEqualTo(DEFAULT_TODAY_PERFORMANCE);
+        assertThat(testShopPerformance.getTotalPerformance()).isEqualTo(DEFAULT_TOTAL_PERFORMANCE);
         assertThat(testShopPerformance.getCreateTime()).isEqualTo(DEFAULT_CREATE_TIME);
         assertThat(testShopPerformance.getDel()).isEqualTo(DEFAULT_DEL);
     }
@@ -171,6 +177,7 @@ public class ShopPerformanceResourceIT {
             .andExpect(jsonPath("$.[*].primeraConsultaLeave").value(hasItem(DEFAULT_PRIMERA_CONSULTA_LEAVE)))
             .andExpect(jsonPath("$.[*].nuevaConsulta").value(hasItem(DEFAULT_NUEVA_CONSULTA)))
             .andExpect(jsonPath("$.[*].todayPerformance").value(hasItem(DEFAULT_TODAY_PERFORMANCE)))
+            .andExpect(jsonPath("$.[*].totalPerformance").value(hasItem(DEFAULT_TOTAL_PERFORMANCE)))
             .andExpect(jsonPath("$.[*].createTime").value(hasItem(DEFAULT_CREATE_TIME)))
             .andExpect(jsonPath("$.[*].del").value(hasItem(DEFAULT_DEL)));
     }
@@ -191,6 +198,7 @@ public class ShopPerformanceResourceIT {
             .andExpect(jsonPath("$.primeraConsultaLeave").value(DEFAULT_PRIMERA_CONSULTA_LEAVE))
             .andExpect(jsonPath("$.nuevaConsulta").value(DEFAULT_NUEVA_CONSULTA))
             .andExpect(jsonPath("$.todayPerformance").value(DEFAULT_TODAY_PERFORMANCE))
+            .andExpect(jsonPath("$.totalPerformance").value(DEFAULT_TOTAL_PERFORMANCE))
             .andExpect(jsonPath("$.createTime").value(DEFAULT_CREATE_TIME))
             .andExpect(jsonPath("$.del").value(DEFAULT_DEL));
     }
@@ -220,6 +228,7 @@ public class ShopPerformanceResourceIT {
             .primeraConsultaLeave(UPDATED_PRIMERA_CONSULTA_LEAVE)
             .nuevaConsulta(UPDATED_NUEVA_CONSULTA)
             .todayPerformance(UPDATED_TODAY_PERFORMANCE)
+            .totalPerformance(UPDATED_TOTAL_PERFORMANCE)
             .createTime(UPDATED_CREATE_TIME)
             .del(UPDATED_DEL);
         ShopPerformanceDTO shopPerformanceDTO = shopPerformanceMapper.toDto(updatedShopPerformance);
@@ -238,6 +247,7 @@ public class ShopPerformanceResourceIT {
         assertThat(testShopPerformance.getPrimeraConsultaLeave()).isEqualTo(UPDATED_PRIMERA_CONSULTA_LEAVE);
         assertThat(testShopPerformance.getNuevaConsulta()).isEqualTo(UPDATED_NUEVA_CONSULTA);
         assertThat(testShopPerformance.getTodayPerformance()).isEqualTo(UPDATED_TODAY_PERFORMANCE);
+        assertThat(testShopPerformance.getTotalPerformance()).isEqualTo(UPDATED_TOTAL_PERFORMANCE);
         assertThat(testShopPerformance.getCreateTime()).isEqualTo(UPDATED_CREATE_TIME);
         assertThat(testShopPerformance.getDel()).isEqualTo(UPDATED_DEL);
     }

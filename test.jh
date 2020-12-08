@@ -5,15 +5,15 @@ entity ShopPerformance {
 	/** 门店名 */
 	shopName String maxlength(50),
     /** 今日初诊 */
-    primeraConsulta String maxlength(64),
+    primeraConsulta Integer,
     /** 留下初诊 */
-    primeraConsultaLeave String maxlength(128),
+    primeraConsultaLeave Integer,
     /** 今日复诊 */
-    nuevaConsulta String maxlength(64),
+    nuevaConsulta Integer,
     /** 今日业绩 */
-    todayPerformance String maxlength(1),
+    todayPerformance Integer,
     /** 累计业绩 */
-    todayPerformance String maxlength(1),
+    totalPerformance Integer,
     /** 创建时间 */
     createTime String,
     /** 数据有效（0：无效 ， 1：有效） */

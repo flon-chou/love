@@ -18,10 +18,11 @@ export class ShopPerformanceUpdateComponent implements OnInit {
   editForm = this.fb.group({
     id: [],
     shopName: [null, [Validators.maxLength(50)]],
-    primeraConsulta: [null, [Validators.maxLength(64)]],
-    primeraConsultaLeave: [null, [Validators.maxLength(128)]],
-    nuevaConsulta: [null, [Validators.maxLength(64)]],
-    todayPerformance: [null, [Validators.maxLength(1)]],
+    primeraConsulta: [],
+    primeraConsultaLeave: [],
+    nuevaConsulta: [],
+    todayPerformance: [],
+    totalPerformance: [],
     createTime: [],
     del: [null, [Validators.max(1)]],
   });
@@ -46,6 +47,7 @@ export class ShopPerformanceUpdateComponent implements OnInit {
       primeraConsultaLeave: shopPerformance.primeraConsultaLeave,
       nuevaConsulta: shopPerformance.nuevaConsulta,
       todayPerformance: shopPerformance.todayPerformance,
+      totalPerformance: shopPerformance.totalPerformance,
       createTime: shopPerformance.createTime,
       del: shopPerformance.del,
     });
@@ -74,6 +76,7 @@ export class ShopPerformanceUpdateComponent implements OnInit {
       primeraConsultaLeave: this.editForm.get(['primeraConsultaLeave'])!.value,
       nuevaConsulta: this.editForm.get(['nuevaConsulta'])!.value,
       todayPerformance: this.editForm.get(['todayPerformance'])!.value,
+      totalPerformance: this.editForm.get(['totalPerformance'])!.value,
       createTime: this.editForm.get(['createTime'])!.value,
       del: this.editForm.get(['del'])!.value,
     };
